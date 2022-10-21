@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 import ContextApi from './ContextApi';
 
 function Provider({ children }) {
-    const [agenda, setAgenda] = useState('');
+    const[data, setData] = useState('');
+    const[schedule, setSchedule] = useState({});
+    const[text, setText] = useState({});
 
-    const contextValue={
-        agenda,
-        setAgenda,
+    const contextValue = {
+        data,
+        setData,
+        schedule,
+        setSchedule,
+        text,
+        setText, 
     }
     return(
         <ContextApi.Provider value={contextValue}>

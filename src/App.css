@@ -70,3 +70,23 @@ input:focus {
 textarea:focus, input:focus{
   outline: none;
 }
+button{
+  margin-left:75px;
+  margin-top:30px;
+  padding:10px;
+  width:100px;
+  background-color:rgb(127, 52, 156); 
+  color:white;
+  border-style: solid;
+  border-color: rgb(127, 52, 156);
+}
+button:hover{
+  margin-left:75px;
+  margin-top:30px;
+  padding:10px;
+  width:100px;
+  background-color:white;
+  color:rgb(127, 52, 156); 
+  border-style: solid;
+  border-color: rgb(127, 52, 156);
+}
