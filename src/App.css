@@ -29,6 +29,18 @@ body{
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
+.container2{
+  display: flex;
+  height: 800px;
+  width:600px;
+  border: 1px solid rgb(128, 37, 151);
+  margin:20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+}
 input{
   padding:10px;
   margin:2px;
@@ -45,6 +57,7 @@ input:hover{
 }
 h1{
   color: rgb(127, 52, 156);
+  
 }
 h6{
   color: rgb(127, 52, 156);
@@ -71,7 +84,7 @@ textarea:focus, input:focus{
   outline: none;
 }
 button{
-  margin-left:75px;
+  margin-left:15px;
   margin-top:30px;
   padding:10px;
   width:100px;
@@ -81,7 +94,6 @@ button{
   border-color: rgb(127, 52, 156);
 }
 button:hover{
-  margin-left:75px;
   margin-top:30px;
   padding:10px;
   width:100px;
@@ -89,4 +101,14 @@ button:hover{
   color:rgb(127, 52, 156); 
   border-style: solid;
   border-color: rgb(127, 52, 156);
+}
+.open {
+  display:flex;
+  justify-content:left;
+  margin-left:-300px;
+}
+.schedules {
+  display: flex;
+  flex-direction: column;
+ 
 }

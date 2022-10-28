@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import { useHistory } from 'react-router-dom';
 import contente from '../moods/feliz.png'
 import feliz from '../moods/olhofechado-feliz.png'
 import surpresa from '../moods/surpresa.png'
@@ -7,9 +8,10 @@ import chorando from '../moods/chorando.png'
 import ContextApi from '../context/ContextApi'
 
 
-function DailyPlanner(){
+function DailyPlanner({id}){
 
-    const{setData, schedule, setSchedule, setText} = useContext(ContextApi);
+    const{setData, data,  schedule, setSchedule, text, setText} = useContext(ContextApi);
+    const history = useHistory();
 
     const handleSet=( {target} )=>{
      const { name, value } = target;
@@ -19,8 +21,16 @@ function DailyPlanner(){
      [name]: value, 
     
     });
- 
-     console.log(schedule)
+ }
+
+ const saveStorage=()=>{
+    localStorage.setItem(`schedule${id}`, JSON.stringify(schedule));
+    localStorage.setItem(`data${id}`,JSON.stringify(data))
+    localStorage.setItem(`text${id}`, JSON.stringify(text));
+ }
+
+ const openStorage=()=>{
+    history.push("/");
  }
 
     return(
@@ -32,8 +42,8 @@ function DailyPlanner(){
                 <h6>Date / Name</h6>
                 <input 
                 type="text" 
-                onChange={ (event) => setData(event.target.value) } 
-                name="value"
+                onChange={ (event) => setData(event.target.value) }
+                name="data"
                 
                 />
             </div>
@@ -147,7 +157,9 @@ function DailyPlanner(){
          onChange={ handleSet}
          name="21:00"/>
          <br/>
-         <button type="submit">Salvar</button>
+         <button type="submit" onClick={ saveStorage }>Save</button>
+         <button type="submit"onClick={ openStorage }>Open</button>
+         
          </div>
       
         </div>

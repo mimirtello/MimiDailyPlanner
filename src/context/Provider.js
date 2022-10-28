@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ContextApi from './ContextApi';
 
 function Provider({ children }) {
-    const[data, setData] = useState('');
+    const[data, setData] = useState({});
     const[schedule, setSchedule] = useState({});
     const[text, setText] = useState({});
 
