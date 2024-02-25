@@ -8,7 +8,6 @@ function SaveShedules(){
         <section className="main">
         <div className="container2">
             <h1>Save Schedules</h1>
-            <div className="schedules">
                 <br/>
                 <br/>
                 <Link to={ '/planner/1'}><p> Segunda</p></Link>
@@ -24,7 +23,7 @@ function SaveShedules(){
                <Link to={ '/planner/6'}><p> Sábado </p></Link>
                <br/>
                <Link to={ '/planner/7'}><p> Domingo </p></Link>
-            </div>
+            
          </div>
         </section>
     )
